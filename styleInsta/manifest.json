@@ -1,0 +1,21 @@
+{
+  "manifest_version" : 2, 
+"name" : "StyleInsta", 
+"version" : "0.1",
+"description" : "Estilização da página do Instagram", 
+"icons" : { "128" : "./src/icon.png"}, 
+"browser_action": {
+"default_icon" : "./src/icon.png", 
+"default_popup" : "main.html"
+},
+ "permissions" : ["activeTab"],
+  "content_scripts":[
+    {
+      "matches" : [
+        "https://www.instagram.com/*"
+        
+        ],
+        "js" : ["content.js"]
+    }
+    ]
+}
