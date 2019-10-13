@@ -1,0 +1,23 @@
+{
+    "manifest_version" : 2, 
+  "name" : "Y2mate", 
+  "version" : "0.1",
+  "description" : "Atalho para o site Y2mate  by Ukecode Community", 
+  "icons" : { "128" : "./src/icon.png"}, 
+  "browser_action": {
+  "default_icon" : "./src/icon.png"
+  },
+   "permissions" : ["activeTab","tabs"],
+    "content_scripts":[
+      {
+        "matches" : [
+          "https://www.youtube.com/*"
+          ],
+          "js" : ["content.js"]
+      }
+      ],
+      "background" : {
+          "scripts" : ["background.js"]
+      }
+  }
+  
