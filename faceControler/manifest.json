@@ -1,0 +1,20 @@
+{
+ "manifest_version" : 2, 
+"name" : "FaceControler", 
+"version" : "0.1",
+"description" :"Controlador de tempo para uso sadio do facebook", 
+"icons" : { "128" : "./src/icon.png"}, 
+"permissions" : ["activeTab","tabs"],
+"browser_action": {
+  "default_icon" : "./src/icon.png"
+  },
+"content_scripts":[
+    {
+      "matches" : [
+        "https://www.facebook.com/*"
+        
+        ],
+        "js" : ["content.js"]
+    }
+    ]
+}
